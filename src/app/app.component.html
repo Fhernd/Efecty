@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<ng2-toasty [position]="'top-center'"></ng2-toasty>
+<div id="energyCostCalculator">
+  <main>
+    <iz-efecty></iz-efecty>
+  </main>
+  <form>
+    <div>
+      <h4>Giro</h4>
+      <p>Monto a girar</p>
+      <div class="text-center">
+        <input type="number" [(ngModel)]="giro" [ngModelOptions]="{standalone: true}" (keyup)="calcularValorGiro()"
+          min="5000" max="3000000" dir="ltr" pattern="^\d+(\.|\,)\d{2}$">
+      </div>
+    </div>
+  </form>
+</div>

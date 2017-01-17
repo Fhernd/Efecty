@@ -1,1 +1,261 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
+
+section {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 110px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+}
+
+main * h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: .8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10px 0 3px 0;
+    text-transform: uppercase;
+}
+
+main * p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#total  {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+main * p + h4 + p {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+main * p::before {
+    content: '$';
+}
+
+
+main * p + h4 + p::before {
+    content: '$';
+}
+
+/*
+main * p + p::after {
+    content: 'por año';
+    color: rgba(255, 255, 255, .5);
+    padding-left: 4px;
+}*/
+
+section > div {
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+
+form {
+    background-color: #000;
+    margin: 0;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+form br {
+    display: none;
+}
+
+form > div {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    position: relative;
+}
+
+form::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+form h4 {
+    color: #aaa;
+    margin: 0 0 -5px 0;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+form p {
+    color: #888;
+    margin: 0 0 6px 0; 
+    font-size: .9em;
+}
+
+form input[type=number] {
+    color: #000; 
+    width: 200px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+form select::-ms-expand{
+    display: none;
+}
+
+@media screen and (max-width:500px){
+    #energyCostCalculator{
+        font-size: 15px;
+    }
+
+    section {
+        padding-top: 130px;
+    }
+
+    main * h4 {
+        margin: 0;
+        font-size: .75em;
+        letter-spacing: 0;
+    }
+
+    main * p {
+        font-size: 1.1em;
+    }
+
+    main * p + p{
+        font-size: 1em;
+    }
+
+    main * p + p::after{
+        display: block;
+        margin-top: -10px;
+        color: #fff;
+    }
+
+    form h4 {
+        font-size: 1.1em;
+        margin: 0;
+    }
+
+    form p {
+        font-size: .8em;
+        line-height: 14px;
+    }
+
+    form br {
+        display: inline;
+    }
+
+    form input[type=number]{
+        color: #000;
+        width: 100px;
+        font-size: .8em;
+    }
+}
+
+.center-block {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+.icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+
+.icon-addon:after,
+.icon-addon:before {
+    display: table;
+    content: " ";
+}
+
+.icon-addon:after {
+    clear: both;
+}
+
+.icon-addon.addon-md .glyphicon,
+.icon-addon .glyphicon, 
+.icon-addon.addon-md .fa,
+.icon-addon .fa {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    font-size: 14px;
+    width: 20px;
+    margin-left: -2.5px;
+    text-align: center;
+    padding: 10px 0;
+    top: 1px
+}
+
+.icon-addon.addon-lg .form-control {
+    line-height: 1.33;
+    height: 46px;
+    font-size: 18px;
+    padding: 10px 16px 10px 40px;
+}
+
+.icon-addon.addon-sm .form-control {
+    height: 30px;
+    padding: 5px 10px 5px 28px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.icon-addon.addon-lg .fa,
+.icon-addon.addon-lg .glyphicon {
+    font-size: 18px;
+    margin-left: 0;
+    left: 11px;
+    top: 4px;
+}
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+    padding-left: 30px;
+    float: left;
+    font-weight: normal;
+}
+
+.icon-addon.addon-sm .fa,
+.icon-addon.addon-sm .glyphicon {
+    margin-left: 0;
+    font-size: 12px;
+    left: 5px;
+    top: -1px
+}
+
+.icon-addon .form-control:focus + .glyphicon,
+.icon-addon:hover .glyphicon,
+.icon-addon .form-control:focus + .fa,
+.icon-addon:hover .fa {
+    color: #EFC20F;
+}
+
+.form-control:focus {
+  border-color: #EFC20F;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.075), 0 0 8px rgba(239, 194, 15, 0.6);
+}
+
+input:focus{
+  border-color: #EFC20F;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.075), 0 0 8px rgba(239, 194, 15, 0.6);
+}
